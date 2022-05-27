@@ -7,7 +7,7 @@ const LandingPageLayout = ({ children }: { children: ReactElement }) => {
       <Container
         maxWidth={false}
         sx={{
-          background: `url('/bg-main.png') no-repeat center center fixed`,
+          background: `url('/bg-main.avif') no-repeat center center fixed`,
           backgroundSize: 'cover'
         }}
       >

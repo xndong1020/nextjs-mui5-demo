@@ -16,30 +16,27 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>Loading Page</title>
       </Head>
-      <Container>
-        <Box
-          sx={{
-            height: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
+      <Container
+        sx={{
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Typography variant="h2" component="div" color="primary">
+          Material UI v5 with Next.js in TypeScript
+        </Typography>
+
+        <Typography
+          variant="body1"
+          component="div"
+          color="secondary"
+          sx={{ fontWeight: 300, position: 'absolute', bottom: 20 }}
         >
-          <Typography variant="h2" component="div" color="primary">
-            Material UI v5 with Next.js in TypeScript
-          </Typography>
-          <Box
-            sx={{
-              position: 'absolute',
-              bottom: 20
-            }}
-          >
-            <Typography variant="body1" component="div" color="secondary">
-              Boilerplate for building faster.
-            </Typography>
-          </Box>
-        </Box>
+          Boilerplate for building faster.
+        </Typography>
       </Container>
     </>
   )

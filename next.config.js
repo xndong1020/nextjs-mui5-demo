@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   webpack(config) {
     // if not work, try `config.module.rules[2]...`
     config.module.rules[3].oneOf.forEach((one) => {
@@ -9,5 +9,9 @@ module.exports = {
       one.issuer.and = [path.resolve(__dirname)]
     })
     return config
-  }
+  },
+  images: {
+    formats: ['image/avif', 'image/webp']
+  },
+  productionBrowserSourceMaps: true
 }
