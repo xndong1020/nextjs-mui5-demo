@@ -24,7 +24,7 @@ const generateCsp = () => {
   csp += `script-src 'nonce-${nonce}' 'unsafe-inline' 'self' ${
     production ? '' : "'unsafe-eval'"
   };` // NextJS requires 'self' and 'unsafe-eval' in dev (faster source maps)
-  csp += `font-src https://fonts.gstatic.com;`
+  csp += `font-src self http://localhost:3000;`
   if (!production) csp += `connect-src 'self';`
 
   return [csp, nonce]

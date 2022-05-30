@@ -7,40 +7,10 @@ import createEmotionCache from '../themes/createEmotionCache'
 class MyDocument extends Document {
   render() {
     return (
-      <Html style={{ minHeight: '100vh' }}>
+      <Html style={{ minHeight: '100vh', fontFamily: 'Poppins' }}>
         <Head>
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
-          <link
-            rel="preload"
-            as="style"
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
-          ></link>
-
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
-            media="print"
-            // @ts-ignore
-            onLoad="this.onload=null;this.removeAttribute('media');"
-          />
-
-          <noscript>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-            />
-          </noscript>
           {(this.props as any).emotionStyleTags}
         </Head>
         <body>

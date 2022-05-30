@@ -5,6 +5,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import LandingPageLayout from '../layouts/LandingPageLayout'
+import Banner from '../components/Banner'
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -16,7 +17,7 @@ const Home: NextPageWithLayout = () => {
       <Head>
         <title>Loading Page</title>
       </Head>
-      <Container
+      <Box
         sx={{
           height: '100vh',
           display: 'flex',
@@ -25,19 +26,8 @@ const Home: NextPageWithLayout = () => {
           alignItems: 'center'
         }}
       >
-        <Typography variant="h2" component="div" color="primary">
-          Material UI v5 with Next.js in TypeScript
-        </Typography>
-
-        <Typography
-          variant="body1"
-          component="div"
-          color="secondary"
-          sx={{ fontWeight: 300, position: 'absolute', bottom: 20 }}
-        >
-          Boilerplate for building faster.
-        </Typography>
-      </Container>
+        <Banner />
+      </Box>
     </>
   )
 }
